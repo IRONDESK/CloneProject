@@ -1,0 +1,43 @@
+header{
+    position: sticky;
+}
+nav{
+    position: relative;
+    display: flex;
+	flex-direction : row;
+    justify-content: space-between;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 72px;
+    overflow: hidden;
+}
+.navLeft{
+    width: 180px;
+    line-height: 72px;
+    position: relative;
+}
+.navRight{
+    width: 180px;
+    text-align: right;
+    line-height: 72px;
+    position: relative;
+}
+.navCenter{
+    text-align: center;
+    line-height: 72px;
+}
+.navLeft > img{
+    width: auto;
+    height: 25px;
+}
+.navCenter > ul, .navRight > ul{
+    display: inline;
+    list-style: none;
+}
+.navCenter > ul > li{
+    display: inline;
+}
+.navRight > ul > li{
+    display: inline;
+}
