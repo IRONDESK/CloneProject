@@ -75,10 +75,10 @@ header > img{
     color: #fff;
     font-size: 22px;
     line-height: 55px;
-
 }
 .declare p:nth-child(2), .declare p:nth-child(3){
     display: inline;
+    margin-right: 8px;
 }
 .declare p input{
     font-family: 'GmarketSansMedium';
@@ -87,28 +87,30 @@ header > img{
     font-size: 22px;
     width: 230px;
     height: 52px;
-    padding-left: 19px;
+    padding: 0 19px;
 }
-
+.declare p input::placeholder{
+    color: silver;
+}
 .btn-container{
     position: relative;
     text-align: center;
     margin-top: 95px;
 }
-.btn-container .btn-result{
+.btn-container .btn{
     cursor: pointer;
     width: 510px;
-    padding: 9px;
+    padding: 10px 40px;
     font-family: 'GmarketSansBold';
     background-color: #FCEE21;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     color: #5B2386;
     font-weight: bold;
     border-radius: 30px;
     border: none;
 }
-.btn-container img{
+.btn-container img{/* click icon */
     position: absolute;
     width: 70px;
     height: 72px;
@@ -116,7 +118,7 @@ header > img{
 
 footer{
     font-family: 'GmarketSansMedium';
-    margin: 75px;
+    margin-top: 75px;
     text-align: center;
     font-size: 12px;
     color: #fff;
@@ -127,7 +129,7 @@ footer > img{
 }
 
 /* mediaquery - 반응형 */
-@media screen and (max-width:600px) {
+@media screen and (max-width:800px) {
     header > img{
         width: 380px;
     }
@@ -136,27 +138,87 @@ footer > img{
     }
     .intro p{
         width: 450px;
-        font-size: 13px;
+        font-size: 16px;
         line-height: 25px;
     }
 
     .intro p img{
-        width: 300px;
+        width: 450px;
     }
     .declare p{
-        font-size: 18px;
+        font-size: 16px;
         line-height: 5px;
     }
     .declare p:nth-child(2), .declare p:nth-child(3){
         display: inline-block;
     }
-    .btn-container p input{
-        font-family: 'GmarketSansMedium';
-        border-radius: 15px;
-        border: none;
-        font-size: 18px;
-        width: 160px;
-        height: 46px;
-        padding-left: 19px;
+    .declare p input{
+        font-size: 16px;
+        width: 200px;
+        height: 49px;
     }
+    .btn-container{
+        margin-top: 45px;
+    }
+    .btn-container .btn{
+        width: 300px;
+        word-break: keep-all;
+        font-size: 18px;
+    }
+    .btn-container img{/* click icon */
+        width: 60px;
+        height: auto;
+    }
+    footer{
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    header{
+        height: 130px;
+        background-size: 130px;
+    }
+    header > img{
+        width: 240px;
+    }
+    .intro h2{
+        font-size: 26px;
+    }
+    .intro p{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .intro p strong{
+        font-size: 15px;
+    }
+    .intro p img{
+        width: 350px;
+    }
+    .declare p{
+        font-size: 15px;
+        line-height: 0px;
+    }
+    .declare p input{
+        font-size: 16px;
+        width: 130px;
+        height: 42px;
+    }
+    .btn-container .btn{
+        width: 250px;
+        font-size: 16px;
+    }
+    .btn-container img{/* click icon */
+        width: 45px;
+        height: auto;
+    }
+    footer{
+        margin-top: 40px;
+        font-size: 10px;
+    }
+    footer > img{
+        width: 100px;
+    }
+
 }
