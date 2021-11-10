@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #5B2386;
+}
+header{
+    margin-top: 30px;
+    height: 280px;
+    text-align: center;
+    background-image: url(img/clock.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+header > img{
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 480px;
+}
+
+.intro{
+    position: relative;
+    text-align: center;
+}
+.intro h2{
+    font-family: 'OTEnjoystoriesBA';
+    text-align: center;
+    color: #FCD821;
+    font-size: 36px;
+    margin-bottom: 35px;
+}
+.intro p{
+    display: inline;
+    font-family: 'GmarketSansMedium';
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+
+}
+.intro p img{ /* quotes */
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 486px;
+}
+.intro p strong{
+    font-size: 20px;
+}
+
+.declare{
+    margin-top: 80px;
+    text-align: center;
+}
+.declare p{
+    font-family: 'GmarketSansMedium';
+    color: #fff;
+    font-size: 22px;
+    line-height: 55px;
+
+}
+.declare p:nth-child(2), .declare p:nth-child(3){
+    display: inline;
+}
+.declare p input{
+    font-family: 'GmarketSansMedium';
+    border-radius: 15px;
+    border: none;
+    font-size: 22px;
+    width: 230px;
+    height: 52px;
+    padding-left: 19px;
+}
+
+.btn-container{
+    position: relative;
+    text-align: center;
+    margin-top: 95px;
+}
+.btn-container .btn-result{
+    cursor: pointer;
+    width: 510px;
+    padding: 9px;
+    font-family: 'GmarketSansBold';
+    background-color: #FCEE21;
+    font-size: 22px;
+    text-align: center;
+    color: #5B2386;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+}
+.btn-container img{
+    position: absolute;
+    width: 70px;
+    height: 72px;
+}
+
+footer{
+    font-family: 'GmarketSansMedium';
+    margin: 75px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+}
+footer > img{
+    width: 125px;
+    margin-bottom: 13px;
+}
+
+/* mediaquery - 반응형 */
+@media screen and (max-width:600px) {
+    header > img{
+        width: 380px;
+    }
+    .intro h2{
+        font-size: 30px;
+    }
+    .intro p{
+        width: 450px;
+        font-size: 13px;
+        line-height: 25px;
+    }
+
+    .intro p img{
+        width: 300px;
+    }
+    .declare p{
+        font-size: 18px;
+        line-height: 5px;
+    }
+    .declare p:nth-child(2), .declare p:nth-child(3){
+        display: inline-block;
+    }
+    .btn-container p input{
+        font-family: 'GmarketSansMedium';
+        border-radius: 15px;
+        border: none;
+        font-size: 18px;
+        width: 160px;
+        height: 46px;
+        padding-left: 19px;
+    }
+}
