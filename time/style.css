@@ -31,14 +31,12 @@ header{
 }
 header > img{
     position: relative;
-    display: inline-block;
     top: 50%;
     transform: translateY(-50%);
     width: 480px;
 }
 
 .intro{
-    position: relative;
     text-align: center;
 }
 .intro h2{
@@ -116,9 +114,59 @@ header > img{
     height: 72px;
 }
 
+.result-container{
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 60px;
+}
+.result-container h2{
+    display: block;
+    position: absolute;
+    font-size: 1px;
+    left:-9999px;
+}
+.result-container p{
+    font-size: 20px;
+    color: #fff;
+    font-family: 'GmarketSansMedium';
+}
+.result-container p strong{
+    font-family: 'GmarketSansBold';
+    font-size: 70px;
+}
+.result-container > p:last-child{
+    margin-bottom: 930px;
+}
+.result-container .btn{
+    display: inline;
+    cursor: pointer;
+    padding: 10px 40px;
+    height: 51px;
+    font-family: 'GmarketSansBold';
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    word-break: keep-all;
+}
+.result-container .yellowBg{
+    width: 300px;
+    background-color: #FCEE21;
+    color: #5B2386;
+    margin-right: 7px;
+}
+.result-container .whiteBg{
+    width: 156px;
+    margin-left: 7px;
+    background-color: #fff;
+    color: #5B2386;
+}
+
 footer{
     font-family: 'GmarketSansMedium';
     margin-top: 75px;
+    margin-bottom: 70px;
     text-align: center;
     font-size: 12px;
     color: #fff;
@@ -169,6 +217,24 @@ footer > img{
         width: 60px;
         height: auto;
     }
+    .result-container p{
+    font-size: 18px;
+    }
+    .result-container p strong{
+    font-size: 29px
+    }
+    .result-container .btn{
+    padding: 10px 25px;
+    font-size: 15px;
+    height: 47px;
+    }
+    .result-container .yellowBg{
+        width: 213px;
+    }
+    .result-container .whiteBg{
+        width: 108px;
+    }
+
     footer{
         font-size: 11px;
     }
@@ -212,6 +278,12 @@ footer > img{
     .btn-container img{/* click icon */
         width: 45px;
         height: auto;
+    }
+    .result-container p{
+        font-size: 15px;
+    }
+    .result-container p strong{
+    font-size: 23px
     }
     footer{
         margin-top: 40px;
