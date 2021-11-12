@@ -28,6 +28,7 @@ header{
     background-image: url(img/clock.png);
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: 225px;
 }
 header > img{
     position: relative;
@@ -91,11 +92,11 @@ header > img{
     color: silver;
 }
 .btn-container{
-    position: relative;
     text-align: center;
     margin-top: 95px;
 }
 .btn-container .btn{
+    position: relative;
     cursor: pointer;
     width: 510px;
     padding: 10px 40px;
@@ -108,16 +109,23 @@ header > img{
     border-radius: 30px;
     border: none;
 }
-.btn-container img{/* click icon */
-    position: absolute;
+.btn-container .btn::after{
+    /* click icon  */
+    cursor: default;
+    bottom: -20px;
+    right: -73px;
     width: 70px;
     height: 72px;
+    position: absolute;
+    display: block;
+    content: '';
+    background-image: url('img/click.png');
 }
 
 .result-container{
     vertical-align: middle;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 130px;
 }
 .result-container h2{
     display: block;
@@ -213,7 +221,7 @@ footer > img{
         word-break: keep-all;
         font-size: 18px;
     }
-    .btn-container img{/* click icon */
+    .btn-container .btn::after{/* click icon */
         width: 60px;
         height: auto;
     }
@@ -275,7 +283,7 @@ footer > img{
         width: 250px;
         font-size: 16px;
     }
-    .btn-container img{/* click icon */
+    .btn-container .btn::after{/* click icon */
         width: 45px;
         height: auto;
     }
