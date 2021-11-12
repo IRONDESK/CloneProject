@@ -1,0 +1,223 @@
+body, input, p, a, button, label { font-family: 'Pretendard', 'Spoqa Han Sans Neo';}
+a { text-decoration: none;
+    color: inherit;}
+
+.screen-out{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}
+
+/** 모달창 중앙정렬 **/
+.modal-container{
+    position: absolute;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    width: 520px;
+    min-height: 712px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/** 제목 **/
+.modal-container header{
+    height: 58px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 58px;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+/** 제목 내 닫기 버튼 **/
+.modal-container .close-btn-container{
+    position: absolute;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 16px;
+    height: 16px;
+    right: 40px;
+    top: 22px;
+}
+.modal-container .close-btn-container .close-btn {
+    position: absolute;
+    display: inline-block;
+    height: 1px;
+    background-color: #767676;
+    width: 22.4px;
+}
+.modal-container .close-btn-container .close-btn:first-child{
+    transform: rotate(-45deg);
+}
+.modal-container .close-btn-container .close-btn:last-child{
+    transform: rotate(-135deg);
+}
+
+/** 내용 **/
+.contents{
+    padding: 24px;
+}
+.contents h2{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+/** 로그인 form **/
+.contents .login-form{
+    margin: 24px 0 21px 0;
+}
+.contents .login-form .login-form-input{
+    margin-bottom: 10px;
+    display: block;
+    width: 472px;
+    height: 50px;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 15px 16px;
+    font-size: 16px;
+}
+
+/** 로그인 상태 유지 **/
+.contents .login-form-remember-container {
+    margin: 16px 0 20px 0;
+}
+.contents .login-form-remember-container .remember-btn-container{
+    margin-top: 2px;
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    border-radius: 100%;
+    border: 1px solid #767676;
+    box-sizing: border-box;
+    width: 22px;
+    height: 22px;
+}
+.contents .login-form-remember-container .remember-btn-container span{
+    position: absolute;
+    display: block;
+    height: 1px;
+    background-color: #767676;
+}
+.contents .login-form-remember-container .remember-btn-container .remember-btn:first-child{
+    width: 5px;
+    top: 11px;
+    left: 5px;
+    transform: rotate(-135deg);
+}
+.contents .login-form-remember-container .remember-btn-container .remember-btn:last-child{
+    width: 8px;
+    top: 10px;
+    left: 8px;
+    transform: rotate(-45deg);
+}
+.contents .login-form-remember-container .remember-text{
+    cursor: pointer;
+    color: #767676;
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+}
+.contents .login-form-remember-container input:checked + label {
+    background-color:#2F80ED;
+    border: 1px solid #2F80ED;
+}
+.contents .login-form-remember-container input:checked + label > span {
+    background-color:#fff;
+}
+
+
+/** 로그인 버튼 **/
+.contents .login-form button{
+    cursor: pointer;
+    width: 472px;
+    height: 50px;
+    background: #2F80ED;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/** 로그인 옵션 (회원가입, 분실) **/
+.login-option {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 18px;
+}
+.login-option a {
+    color: #767676;
+}
+.login-option a:first-child {
+    padding-right: 12px;
+    border-right: 1px solid #767676;
+}
+.login-option a:last-child {
+    padding-left: 12px;
+}
+
+/** Footer **/
+footer{
+    margin-top: 30px;
+    border-top: 1px solid #C4C4C4;  
+}
+/** 또는 **/
+footer p{
+    position: absolute;
+    display: block;
+    color: #767676;
+    width: 52px;
+    font-size: 14px;
+    text-align: 17.5px;
+    background-color: #fff;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/** SNS 로그인 **/
+footer .login-sns-container{
+    margin-top: 29px;
+}
+footer .login-sns-container .login-sns-btn{
+    position: relative;
+    cursor: pointer;
+    width: 472px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #767676;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding-left: 28px;
+}
+footer .login-sns-container .login-sns-btn::before{
+    /* SNS 로고 */
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 11px;
+    left: 12px;
+}
+.google-style{ border: 1px solid #767676; }
+.fb-style{ border: 1px solid #2D9CDB; }
+.naver-style{ border: 1px solid #00BF18; }
+.kakao-style{ border: 1px solid #F2C94C; }
+
+.google-style::before{ background-image: url(google_logo.svg);}
+.fb-style::before{ background-image: url(facebook_logo.svg); }
+.naver-style::before{ background-image: url(naver_logo.svg); }
+.kakao-style::before{ background-image: url(kakao_logo.svg); }

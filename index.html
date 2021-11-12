@@ -5,38 +5,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1만 시간의 법칙</title>
+    <title>Login Modal</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
 
 <body>
-    <header>
-        <img src="img/title.png" alt="1만 시간의 법칙">
-    </header>
-    <main>
-        <section class="intro">
-            <h2>"연습은 어제의 당신보다 당신을 더 낫게 만든다."</h2>
-            <p><img src="img/quotes.png" alt="">
-                <strong>1만 시간의 법칙</strong>은<br>어떤 분야의 전문가가 되기 위해서는<br>최소한 1만 시간의 훈련이 필요하다는 법칙이다.
+    <section class="modal-container">
+        <header>
+            로그인 또는 회원가입
+            <button class="close-btn-container">
+                <span class="close-btn"></span>
+                <span class="close-btn"></span>
+            </button>
+        </header>
+        <section class="contents">
+            <h2>위니브에서 여러분의 궁금증을 해결하세요! :)</h2>
+            <form action="" method="GET" class="login-form">
+                <label for="login-form-id" class="screen-out">아이디</label>
+                <input type="text" id="login-form-id" class="login-form-input" placeholder="아이디" required>
+                <label for="login-form-password" class="screen-out">비밀번호</label>
+                <input type="text" id="login-form-password" class="login-form-input" placeholder="비밀번호" required>
+                <p class="login-form-remember-container">
+                    <input type="checkbox" id="login-form-remember" class="screen-out">
+                    <label for="login-form-remember" class="remember-btn-container">
+                        <span class="remember-btn"></span>
+                        <span class="remember-btn"></span>
+                    </label>
+                    <label for="login-form-remember" class="remember-text">로그인 상태 유지</label>
+                </p>
+                <button type="submit">로그인</button>
+            </form>
+            <p class="login-option">
+                <a href="#">회원가입</a><a href="#">아이디/비밀번호 찾기</a>
             </p>
+            <footer>
+                <p>또는</p>
+                <div class="login-sns-container">
+                    <button class="login-sns-btn google-style">구글 계정으로 로그인</button>
+                    <button class="login-sns-btn fb-style">페이스북 계정으로 로그인</button>
+                    <button class="login-sns-btn naver-style">네이버 계정으로 로그인</button>
+                    <button class="login-sns-btn kakao-style">카카오톡 계정으로 로그인</button>
+                </div>
+            </footer>
         </section>
-        <section class="declare">
-            <p>나는 <input type="text" class="what" placeholder="예)프로그래밍"> 전문가가 될 것이다.</p>
-
-            <p>그래서 앞으로 매일 하루에</p><p><input type="number" class="what" placeholder="예)5"> 시간씩 훈련할 것이다.
-            </p>
-        </section>
-        <section class="btn-container">
-            <button class="btn">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button><img src="img/click.png" alt="">
-        </section>
-    </main>
-    <footer>
-        <img src="img/logo.png" alt="WENIV">
-        <p class="copy-text">
-            ※ 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.<br>
-            수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.
-        </p>
-    </footer>
+    </section>
 </body>
 
 </html>
