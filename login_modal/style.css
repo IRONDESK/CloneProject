@@ -37,7 +37,6 @@ a { text-decoration: none;
 .login-cont label {
     cursor: pointer;
     display: inline-block;
-
     width: 440px;
     height: 60px;
     text-align: center;
@@ -48,6 +47,7 @@ a { text-decoration: none;
     background-color: #2F80ED;
     border-radius: 5px;
 }
+/* 모달 박스 보여지기 */
 .login-checkbox:checked + section{
     display: inline-block;
     position: absolute;
@@ -86,8 +86,8 @@ a { text-decoration: none;
     cursor: pointer;
     background: none;
     border: none;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     right: 40px;
     top: 30px;
 }
