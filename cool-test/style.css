@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Sam3KRFont';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Sam3KRFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Sam3KRFont', sans-serif;
+}
+
+/* 
+
+index.html
+
+*/
+.landing {
+    background-color: #00007E;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    min-height: 500px;
+}
+
+.landing h1 {
+    margin-bottom: 33px;
+    border-top: 5px dotted #fff;
+    border-bottom: 5px dotted #fff;
+    font-size: 2.3em;
+    font-weight: 700;
+}
+
+.landing p {
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+.footer {
+    height: 30vh;
+    background-color: #e8eef4;
+    color: #7c8081;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+
+test.html
+ 
+*/
+
+.header {
+    margin-bottom: 30px;
+}
+.header h1{
+    background-color: #00007E;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    min-height: 60px;
+}
+
+.q-contain article {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px #eeeeee;
+}
+
+.question h2 {
+    font-weight: 700;
+}
+
+.question p{
+    text-align: center;
+    width: 80%;
+}
+
+/* 
+
+result.html
+
+*/
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.result img {
+    max-width: 400px;
+    width: 80%;
+}
