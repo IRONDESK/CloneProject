@@ -3,12 +3,13 @@ a { text-decoration: none;
     color: inherit;}
 
 .screen-out{
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    display: block;
     overflow: hidden;
-    clip-path: polygon(0 0, 0 0, 0 0);
+    position: absolute;
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 0px;
+    color: transparent;
 }
 
 /** 로그인 기본 **/
@@ -34,7 +35,8 @@ a { text-decoration: none;
 .login-checkbox {
     display: none;
 }
-.login-cont label {
+
+.login-cont .modal-call-btn {
     cursor: pointer;
     display: inline-block;
     width: 440px;
@@ -44,31 +46,44 @@ a { text-decoration: none;
     font-size: 22px;
     line-height: 60px;
     color: #fff;
-    background-color: #2F80ED;
+    border: none;
     border-radius: 5px;
+    background: #2F80ED;
 }
-/* 모달 박스 보여지기 */
-.login-checkbox:checked + section{
-    display: inline-block;
-    position: absolute;
-    z-index: 999;
-}
+
 .modal-container{
     display: none;
 }
 /** 모달창 중앙정렬 **/
-.modal-container{
-    position: absolute;
-    background-color: #fff;
-    border: 1px solid #C4C4C4;
-    border-radius: 10px;
-    width: 520px;
-    min-height: 712px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.modal-container.on{
+    display: block;
+    
 }
-
+.modal-container::after{
+    /* dim (뒷배경 살짝 어둡게) */
+    display: block;
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: .7;
+    z-index: 10;
+}
+.cont-form-login {
+    width: 100%;
+    max-width: 520px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 20;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+}
 /** 제목 **/
 .modal-container header{
     height: 58px;
@@ -80,23 +95,23 @@ a { text-decoration: none;
     border-bottom: 1px solid #C4C4C4;
 }
 
-/** 제목 내 닫기 버튼 **/
+/** 로그인 창 닫기 버튼 **/
 .modal-container .close-btn-container{
     position: absolute;
     cursor: pointer;
     background: none;
-    border: none;
     width: 20px;
     height: 20px;
-    right: 40px;
-    top: 30px;
+    right: 30px;
+    top: 20px;
+    border: none;
 }
 .modal-container .close-btn-container .close-btn {
-    position: absolute;
-    display: inline-block;
+    position: relative;
+    display: block;
     height: 1px;
     background-color: #767676;
-    width: 22.4px;
+    width: 23px;
 }
 .modal-container .close-btn-container .close-btn:first-child{
     transform: rotate(-45deg);
@@ -119,7 +134,7 @@ a { text-decoration: none;
 .contents .login-form{
     margin: 24px 0 21px 0;
 }
-.contents .login-form .login-form-input{
+.contents .login-form .login-inp{
     margin-bottom: 10px;
     display: block;
     width: 472px;
@@ -131,11 +146,33 @@ a { text-decoration: none;
     font-size: 16px;
 }
 
+/** Error **/
+.module-inp.module-inp-id.error .login-inp {
+    border:2px solid #f4492e
+}
+
+.module-inp .inp-error{
+    display: none;
+    margin:0 0 0 4px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #F4492E;
+}
+
+.module-inp.error .inp-error{
+    display: block;
+}
+
+.module-inp + .module-inp {
+    margin-top: 10px;
+}
+
+
 /** 로그인 상태 유지 **/
 .contents .login-form-remember-container {
     margin: 16px 0 20px 0;
 }
-.contents .login-form-remember-container .remember-btn-container{
+.login-form-remember-container .remember-btn-container{
     margin-top: 2px;
     cursor: pointer;
     display: inline-block;
@@ -146,25 +183,31 @@ a { text-decoration: none;
     width: 22px;
     height: 22px;
 }
-.contents .login-form-remember-container .remember-btn-container span{
+.login-form-remember-container input{
+    display: none;
+}
+.login-form-remember-container input:focus+label::before{
+    outline: 2px solid #000;
+}
+.login-form-remember-container .remember-btn-container span{
     position: absolute;
     display: block;
     height: 1px;
     background-color: #767676;
 }
-.contents .login-form-remember-container .remember-btn-container .remember-btn:first-child{
+.login-form-remember-container .remember-btn-container .remember-btn:first-child{
     width: 5px;
     top: 11px;
     left: 5px;
     transform: rotate(-135deg);
 }
-.contents .login-form-remember-container .remember-btn-container .remember-btn:last-child{
+.login-form-remember-container .remember-btn-container .remember-btn:last-child{
     width: 8px;
     top: 10px;
     left: 8px;
     transform: rotate(-45deg);
 }
-.contents .login-form-remember-container .remember-text{
+.login-form-remember-container .remember-text{
     cursor: pointer;
     color: #767676;
     margin-left: 30px;
@@ -172,11 +215,11 @@ a { text-decoration: none;
     font-size: 16px;
     line-height: 28px;
 }
-.contents .login-form-remember-container input:checked + label {
+.login-form-remember-container input:checked + label {
     background-color:#2F80ED;
     border: 1px solid #2F80ED;
 }
-.contents .login-form-remember-container input:checked + label > span {
+.login-form-remember-container input:checked + label > span {
     background-color:#fff;
 }
 
