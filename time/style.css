@@ -18,6 +18,7 @@
     font-style: normal;
 }
 
+
 body{
     background-color: #5B2386;
 }
@@ -122,10 +123,25 @@ header > img{
     background-image: url('img/click.png');
 }
 
-.result-container{
-    vertical-align: middle;
-    text-align: center;
+.off {display: none;}
+.load-container {
     margin-top: 130px;
+}
+.load-container #load-img {
+    display: block;
+    margin: 0 auto;
+    background-image: url(./img/loading.png);
+    width: 225px;
+    height: 225px;
+    animation: rotate 0.8s infinite;
+}
+@keyframes rotate {
+    100% {transform: rotate(1turn)}
+}
+
+.result-container{
+    text-align: center;
+    margin-top: 110px;
 }
 .result-container h2{
     display: block;
