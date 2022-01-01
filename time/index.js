@@ -16,6 +16,10 @@ function calTime () {
             alert("값이 입력되지 않았습니다.");
             return
         }
+        if (timeInput.value > 23) {
+            alert("하루는 24시간 입니다. 현실적인 계획을 세워봅시다.");
+            return
+        }
         resultCont.classList.add("off");
         loadCont.classList.remove("off");
         window.scrollBy(0, 1200);
